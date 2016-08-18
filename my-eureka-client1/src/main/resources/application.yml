@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: client1
+eureka:
+  instance:
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      healthcheck:
+        enabled: true
+endpoints:
+  shutdown:
+    enabled: true

@@ -1,0 +1,9 @@
+zuul用来做服务路由
+可以将zuul想成一个中间件，然后根据请求url的不同转发到不同的provider上
+这样APP一次请求可能会跨公网走一次http，然后再内网走2次http，不知道性能如何
+
+具体在用的时候，consumer端做服务发现的时候就直接指定serviceId为zuul的地址
+也就是相当于zuul服务器做了一层代理
+
+另外EnableZuulProxy一定是需要开启服务发现的
+如果不需要服务发现，用EnableZuulServer

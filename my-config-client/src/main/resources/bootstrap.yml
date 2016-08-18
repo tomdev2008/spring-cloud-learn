@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: blink
+  cloud:
+    config:
+      failFast: true
+      uri: http://115.239.208.151:8980

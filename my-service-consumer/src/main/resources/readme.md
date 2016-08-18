@@ -1,0 +1,5 @@
+实现一个服务消费者
+还是基于Ribbon，但是不通过服务发现，而采用配置一个serverList来做
+然后也用到了Hystrix的断路器功能
+
+注意，在RestTemplate上就不需要再加LoadBalance注解了
